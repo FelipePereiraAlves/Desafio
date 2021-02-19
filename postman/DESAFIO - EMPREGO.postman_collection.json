@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "b4c9200a-f084-484f-bc86-178dbda6a665",
+		"name": "DESAFIO - EMPREGO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PROFILE",
+			"item": [
+				{
+					"name": "CREATE PROFILE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"document\": \"104.144.496-65\",\r\n    \"password\": \"123456\",\r\n    \"contraPassword\":\"123456\",\r\n    \"name\": \"Raimunda Mariah Duarte\",\r\n    \"birtDate\": \"1988-11-29\",\r\n    \"gender\": \"F\",\r\n    \"identity\": \"37.158.149-7\",\r\n    \"issuingBody\": \"SSP\",\r\n    \"state\": \"MG\",\r\n    \"dad\": \"Rebeca Jennifer\",\r\n    \"mother\": \"Kauê Jorge Severino Duarte\",\r\n    \"recordNumber\": \"04391469874\",\r\n    \"habilitationCategory\": \"B\",\r\n    \"habilitationShelfLite\": \"2008-06-24\",\r\n    \"habilitationFirstLicence\": \"2023-01-18\",\r\n    \"habilitationPlaceLicence\": \"Contagem, MG\",\r\n    \"zipCode\": \"30850660\",\r\n    \"street\": \"Rua dos saxofones\",\r\n    \"numberHouse\": \"100\",\r\n    \"complement\": \"CS\",\r\n    \"neighborhood\": \"Conjunto California\",\r\n    \"city\": \"Belo Horizonte\",\r\n    \"stateAddress\": \"MG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/v1/profile/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PROFILE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/v1/profile/10414449665",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								"10414449665"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PROFILE",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"123456789\",\r\n    \"contraPassword\":\"123456789\",\r\n    \"gender\": \"F\",\r\n    \"recordNumber\": \"32427275704\",\r\n    \"habilitationCategory\": \"B\",\r\n    \"habilitationShelfLite\": \"2008-06-24\",\r\n    \"habilitationPlaceLicence\": \"Japaozinho, MG\",\r\n    \"zipCode\": \"49063028\",\r\n    \"street\": \"Rua C\",\r\n    \"numberHouse\": \"792\",\r\n    \"complement\": \"CS\",\r\n    \"neighborhood\": \"Japãozinho\",\r\n    \"city\": \"Aracaju\",\r\n    \"stateAddress\": \"SE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/v1/profile/10414449665",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								"10414449665"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PROFILE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/v1/profile/10414449665",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								"10414449665"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VEHICLE",
+			"item": [
+				{
+					"name": "CREATE VEHICLE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"documentProfile\": \"10414449665\",\r\n    \"via\": \"01\",\r\n    \"renavanCode\": \"00205965059\",\r\n    \"rntrc\": \"\",\r\n    \"exercise\": 2021,\r\n    \"board\": \"hne-5029\",\r\n    \"chassi\": \"KMHJM81BAAU191383\",\r\n    \"kindSpecies\": \"MIS/CAMIONETA\",\r\n    \"vehicleFuel\": \"GASOLINA\",\r\n    \"brandModel\": \"I/HYUNDAI TUCSON GL 20L\",\r\n    \"yearOfManufacture\": 2009,\r\n    \"modelYear\": 2010,\r\n    \"capPotCil\": \"0,46T/143CV\",\r\n    \"category\": \"PARTICULAR\",\r\n    \"predominatColor\": \"PRETA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/v1/vehicle/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VEHICLE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/v1/vehicle/hne-5029",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"hne-5029"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE VEHICLE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3030/api/v1/vehicle/hne-5029",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"hne-5029"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE VEHICLE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"documentProfile\": \"10414449665\",\r\n    \"via\": \"01\",\r\n    \"renavanCode\": \"00205965059\",\r\n    \"rntrc\": \"\",\r\n    \"exercise\": 2021,\r\n    \"board\": \"hne-5029\",\r\n    \"chassi\": \"KMHJM81BAAU191383\",\r\n    \"kindSpecies\": \"MIS/CAMIONETA\",\r\n    \"vehicleFuel\": \"GASOLINA\",\r\n    \"brandModel\": \"I/HYUNDAI TUCSON GL 20L\",\r\n    \"yearOfManufacture\": 2009,\r\n    \"modelYear\": 2010,\r\n    \"capPotCil\": \"0,46T/143CV\",\r\n    \"category\": \"PARTICULAR\",\r\n    \"predominatColor\": \"PRETA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3030/api/v1/vehicle/hne-5029",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3030",
+							"path": [
+								"api",
+								"v1",
+								"vehicle",
+								"hne-5029"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ACCIDENT",
+			"item": [
+				{
+					"name": "CREATE ACCIDENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
